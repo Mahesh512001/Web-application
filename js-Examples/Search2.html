@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="sytlesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <title>Document</title>
+</head>
+
+<body class="container-fluid w-25 mt-3">
+    <form action="./results.html" method="get" class="border border-2 border-dark p-3">
+        <dl>
+            <dt>select category</dt>
+            <dd>
+                <select name="category" id="" class="form-select">
+                    <option>Seclect category</option>
+                    <option>Fashion</option>
+                    <option>Electronics</option>
+
+                </select>
+            </dd>
+        </dl>
+        <dl>
+            <dt>
+                Enter brand name
+            </dt>
+            <dd><input name="brand" type="text" class="form-control"></dd>
+        </dl>
+        <button type="submit" class="btn btn-primary">Search</button>
+    </form>
+</body>
+
+</html>

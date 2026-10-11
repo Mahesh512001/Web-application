@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="sytlesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <title>Document</title>
+    <script>
+
+        function getParams() {
+ params = new URLSearchParams(location.search);
+        document.querySelector("#category").textContent = params.get("category");
+        document.querySelector("#brand").textContent = params.get("brand");
+        }
+
+
+    </script>
+</head>
+
+<body onload="getParams()" class="container-fluid w-25 mt-3">
+    <table class="table table-bordered table-striped">
+        <tr>
+            <td>Category</td>
+            <td id="category"></td>
+        </tr>
+        <tr>
+            <td>Brand</td>
+            <td id="brand"></td>
+        </tr>
+    </table>
+    <a href="./Search2.html">Back to Search</a>
+</body>
+
+</html>

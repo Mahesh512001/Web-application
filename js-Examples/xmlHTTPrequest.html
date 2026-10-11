@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+
+    <script>
+
+function bodyload() {
+    let http = new XMLHttpRequest();
+http.open("Get","../data/product.json",true);
+
+http.send();
+http.onreadystatechange = () =>{
+    if(http.onreadyState() === 4){
+       let data = http.responseText;
+       console.log(data);
+     
+    }
+}
+}
+
+        
+    </script>
+
+</head>
+
+<body class="container-fluid" onload="bodyload()">
+
+    <div class="row mt-4">
+
+        <div class="col-3">
+
+            <img width="100%" id="imgProduct">
+
+        </div>
+
+        <div class="col-6">
+
+            <div id="lblTitle" class="fs-5 fw-bold"></div>
+
+            <div id="lblRating" class="mt-3"></div>
+
+            <ul id="lstFeatures" class="mt-3 text-secondary" style="margin-left: -20px;">
+
+
+
+            </ul>
+
+        </div>
+
+        <div class="col-3">
+
+            <div id="lblPrice" class="fs-1 fw-bold"></div>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

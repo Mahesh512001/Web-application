@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <title>Document</title>
+    <script>
+             
+        function verifyPassword() {
+            let password = document.getElementById("txtPwd").value;
+          let msg = document.getElementById("lblPwd");
+            
+             var regExp = /^(?=.*[A-Z])\w{4,10}$/;
+
+             if(password.match(regExp)){
+                msg.innerHTML = "strong password";
+                document.getElementById("progressBar").style.backgroundColor = "green";
+             }
+             else if(password.length<4){
+                msg.innerHTML = "weak password";
+                document.getElementById("progressBar").style.backgroundColor = "red";
+
+             }else{
+                msg.innerHTML = "Poor password";
+                document.getElementById("progressBar").style.backgroundColor = "orange";
+             }
+        }
+    </script>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <dl class="w-25 mt-4">
+            <dt>Password</dt>
+            <dd>
+                <input type="text"onkeyup="verifyPassword()" id="txtPwd" class="form-control">
+            </dd>
+            <dd id="progressBar">
+                <div>
+                    <span class="text-white" id="lblPwd"></span>
+                </div>
+
+            </dd>
+        </dl>
+    </div>
+</body>
+
+</html>

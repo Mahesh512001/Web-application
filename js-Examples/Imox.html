@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <title>Imox</title>
+    <Script>
+
+
+        function updateClick() {
+
+        }
+
+        function bookTicket() {
+            document.getElementById("summary-detailed").style.display = "block";
+            document.getElementById("ButtonContainer").style.display = "none";
+
+
+
+            lstmovie = document.getElementById("lstmovie");
+            lsttime = document.getElementById("lsttime");
+            lsttheater = document.getElementById("lsttheater");
+            lstdate = document.getElementById("lstdate");
+
+            document.getElementById("lblmovie").textContent = lstmovie.value;
+            document.getElementById("lbltime").textContent = lsttime.value;
+            document.getElementById("lbltheater").textContent = lsttheater.value;
+            document.getElementById("lbldate").textContent = lstdate.value;
+
+            imgPoster = document.querySelector("#summary-detailed img");
+            if (lstmovie.value == "Mirzapur") {
+                imgPoster.src = "../public/images/image-1.jpg";
+            }
+            else if (lstmovie.value == "The Family Man") {
+                imgPoster.src = "../public/images/image-2.jpg";
+            }
+            else {
+                alert("Please select a valid movie");
+
+            }
+        }
+
+    </Script>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div id="ButtonContainer">
+            <button class="btn btn-primary mt-3" data-bs-toggle="modal" data-bs-target="#quickBookingModal">Quick
+                Booking</button>
+        </div>
+        <div class="modal fade  " id="quickBookingModal">
+            <div class="modal-dialog modal-fullscreen">
+                <div class="modal-content  ">
+                    <div class="modal-header">
+                        <h4>Quick Booking</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="d-flex flex-row align-items-baseline justify-content-between gap-2 ">
+                            <select name="" id="lstdate" class="form-select">
+                                <option>Sleect Date</option>
+                                <option>04 sep 2026</option>
+                                <option>05 sep 2026</option>
+                            </select>
+                            <select name="" id="lsttime" class="form-select">
+                                <option>Select Time</option>
+                                <option>Morning 9:00</option>
+                                <option>Afternoon 2:00</option>
+                            </select>
+                            <select name="" id="lstmovie" class="form-select">
+                                <option>Select Movie</option>
+                                <option>Mirzapur</option>
+                                <option>The Family Man</option>
+                            </select>
+                            <select name="" id="lsttheater" class="form-select">
+                                <option>Select Theater</option>
+                                <option>INOX</option>
+                                <option>Cinepolis</option>
+                            </select>
+                            <button onclick="bookTicket()" data-bs-dismiss="modal" class="btn btn-primary">Book
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="w-25" style="display:none;" id="summary-detailed">
+            <div class="card w-100 m-2 mt-5 shadow-lg">
+                <div class="card-header">
+                    <h5 class=" d-flex justify-content-between"><span class="bi bi-ticket-detailed"></span> Quick
+                        Booking</h5>
+                </div>
+                <div class="card-body">
+                    <img class="w-100" height="200">
+
+                    <div class="">
+                        <p class="d-flex justify-content-between"><span class="fw-bold">Movie</span><span
+                                id="lblmovie"></span></p>
+                        <p class="d-flex justify-content-between"><span class="fw-bold">Date</span><span
+                                id="lbldate"></span></p>
+                        <p class="d-flex justify-content-between"><span class="fw-bold">Time</span><span
+                                id="lbltime"></span></p>
+                        <p class="d-flex justify-content-between"><span class="fw-bold">Theater</span><span
+                                id="lbltheater"></span></p>
+                        <div data-bs-target="#quickBookingModal" data-bs-toggle="modal"
+                            class="btn btn-warning w-100 p-2"><span class="bi bi-pencil me-2"></span>Update Booking
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

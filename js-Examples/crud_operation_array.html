@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+
+    <script>
+
+       var movieDetails = [
+    {
+        id: 100,
+        name: "Parrot",
+        img: "/Public/images/image-1.jpg"
+    },
+    {
+        id: 101,
+        name: "Avengers",
+        img: "/Public/images/image-2.jpg"
+    },
+    {
+        id: 102,
+        name: "Interstellar",
+        img: "/Public/images/image-3.jpg"
+    },
+    {
+        id: 103,
+        name: "Inception",
+        img: "/Public/images/image-4.jpg"
+    },
+    {
+        id: 104,
+        name: "Holiday",
+        img: "/Public/images/image-5.jpg"
+    },
+    {
+        id: 105,
+        name: "Avatar",
+        img: "/Public/images/image-6.jpg"
+    },
+    {
+        id: 106,
+        name: "Titanic",
+        img: "/Public/images/image-7.jpg"
+    },
+    {
+        id: 107,
+        name: "The Dark Knight",
+        img: "/Public/images/image-8.jpg"
+    },
+    {
+        id: 108,
+        name: "Joker",
+        img: "/Public/images/image-9.jpg"
+    },
+    {
+        id: 109,
+        name: "Spider-Man",
+        img: "/Public/images/image-10.jpg"
+    },
+    {
+        id: 110,
+        name: "Iron Man",
+        img: "/Public/images/image-11.jpg"
+    },
+    {
+        id: 111,
+        name: "Thor",
+        img: "/Public/images/image-12.jpg"
+    },
+    {
+        id: 112,
+        name: "Black Panther",
+        img: "/Public/images/image-13.jpg"
+    },
+    {
+        id: 113,
+        name: "Doctor Strange",
+        img: "/Public/images/image-14.jpg"
+    },
+    {
+        id: 114,
+        name: "Captain America",
+        img: "/Public/images/image-15.jpg"
+    },
+    {
+        id: 115,
+        name: "Jurassic World",
+        img: "/Public/images/image-16.jpg"
+    },
+    {
+        id: 116,
+        name: "The Matrix",
+        img: "/Public/images/image-17.jpg"
+    },
+    {
+        id: 117,
+        name: "Gladiator",
+        img: "/Public/images/image-18.jpg"
+    },
+    {
+        id: 118,
+        name: "The Batman",
+        img: "/Public/images/image-19.jpg"
+    },
+    {
+        id: 119,
+        name: "John Wick",
+        img: "/Public/images/image-20.jpg"
+    },
+    {
+        id: 120,
+        name: "Mission Impossible",
+        img: "/Public/images/image-21.jpg"
+    },
+    {
+        id: 121,
+        name: "Fast & Furious",
+        img: "/Public/images/image-22.jpg"
+    },
+    {
+        id: 122,
+        name: "Transformers",
+        img: "/Public/images/image-23.jpg"
+    },
+    {
+        id: 123,
+        name: "Aquaman",
+        img: "/Public/images/image-24.jpg"
+    },
+    {
+        id: 124,
+        name: "Man of Steel",
+        img: "/Public/images/image-25.jpg"
+    },
+    {
+        id: 125,
+        name: "Wonder Woman",
+        img: "/Public/images/image-26.jpg"
+    },
+    {
+        id: 126,
+        name: "Deadpool",
+        img: "/Public/images/image-27.jpg"
+    },
+    {
+        id: 127,
+        name: "Logan",
+        img: "/Public/images/image-28.jpg"
+    },
+    {
+        id: 128,
+        name: "Venom",
+        img: "/Public/images/image-29.jpg"
+    },
+    {
+        id: 129,
+        name: "Black Adam",
+        img: "/Public/images/image-30.jpg"
+    },
+    {
+        id: 130,
+        name: "Dune",
+        img: "/Public/images/image-31.jpg"
+    },
+    {
+        id: 131,
+        name: "Oppenheimer",
+        img: "/Public/images/image-32.jpg"
+    },
+    {
+        id: 132,
+        name: "Tenet",
+        img: "/Public/images/image-33.jpg"
+    },
+    {
+        id: 133,
+        name: "Dunkirk",
+        img: "/Public/images/image-34.jpg"
+    },
+    {
+        id: 134,
+        name: "The Prestige",
+        img: "/Public/images/image-35.jpg"
+    },
+    {
+        id: 135,
+        name: "The Martian",
+        img: "/Public/images/image-36.jpg"
+    },
+    {
+        id: 136,
+        name: "Gravity",
+        img: "/Public/images/image-37.jpg"
+    },
+    {
+        id: 137,
+        name: "1917",
+        img: "/Public/images/image-38.jpg"
+    },
+    {
+        id: 138,
+        name: "Ford v Ferrari",
+        img: "/Public/images/image-39.jpg"
+    },
+    {
+        id: 139,
+        name: "Top Gun",
+        img: "/Public/images/image-40.jpg"
+    },
+    {
+        id: 140,
+        name: "The Equalizer",
+        img: "/Public/images/image-41.jpg"
+    },
+    {
+        id: 141,
+        name: "Taken",
+        img: "/Public/images/image-42.jpg"
+    },
+    {
+        id: 142,
+        name: "Now You See Me",
+        img: "/Public/images/image-43.jpg"
+    },
+    {
+        id: 143,
+        name: "The Conjuring",
+        img: "/Public/images/image-44.jpg"
+    },
+    {
+        id: 144,
+        name: "A Quiet Place",
+        img: "/Public/images/image-45.jpg"
+    },
+    {
+        id: 145,
+        name: "IT",
+        img: "/Public/images/image-46.jpg"
+    },
+    {
+        id: 146,
+        name: "The Nun",
+        img: "/Public/images/image-47.jpg"
+    },
+    {
+        id: 147,
+        name: "World War Z",
+        img: "/Public/images/image-48.jpg"
+    },
+    {
+        id: 148,
+        name: "I Am Legend",
+        img: "/Public/images/image-49.jpg"
+    },
+    {
+        id: 149,
+        name: "The Maze Runner",
+        img: "/Public/images/image-50.jpg"
+    }
+];
+
+
+        function LoadData() {
+            document.getElementById("ShowData").innerHTML = "";
+            movieDetails.forEach((value) => {
+                const col = document.createElement("div");
+                col.className = "col-3";
+                col.innerHTML = `
+                    <div class="card m-3">
+                        <div class="card-header">
+                            <img class="card-img-top" src="${value.img}" alt="">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">${value.name}</h5>
+                            <span class="d-inline-flex align-items-center border text-primary px-2 py-1 rounded">ID:
+                                ${value.id}</span>
+                            <div><span class="bi bi-image "></span><span class="mx-2">${value.img}</span>
+                            </div>
+                        </div>
+                        <div class="card-footer d-flex justify-content-center align-items-center">
+                          <button onclick= "ClickEdit(${value.id})" data-bs-target="#movieUpdate" data-bs-toggle="modal" class="btn btn-warning edit-btn col-6 mx-2 " data-id="${value.id}">
+                                 Edit
+                        </button>
+
+                        <button class="btn btn-outline-danger delete-btn col-6  " onclick="Clickdelete(${value.id})" data-id="${value.id}">
+                        <span class="bi bi-trash"></span>
+                        Delete
+                        </button>
+                        </div>
+                    </div> `;
+                const ShowData = document.getElementById("ShowData");
+                ShowData.appendChild(col);
+            })
+        }
+
+        let editId = null;
+        function ClickEdit(id) {
+          editId  = id;
+            const title = document.getElementById("movieName");
+           const movie =  movieDetails.find(x => (x.id === id));
+            title.innerHTML = movie.name;
+            document.getElementById("newPath").value = movie.img;
+            document.getElementById("newName").value = movie.name;
+
+            
+           
+        }
+         function ClickUpdate(){
+              const newName = document.getElementById("newName").value;
+            const newPath = document.getElementById("newPath").value;
+            let  movie = movieDetails.find(x =>(x.id === editId));
+            
+
+           movie.name = newName;
+            movie.img = newPath;
+            LoadData();
+        }
+
+      
+
+        function AddClick() {
+            var AddName = document.getElementById("name").value;
+            var Addimg = document.getElementById("img").value;
+            var newMovie = {
+                id: movieDetails.length > 0 ? movieDetails[movieDetails.length - 1].id + 1 : 100,
+                name: AddName,
+                img: Addimg
+            };
+            movieDetails.push(newMovie);
+            LoadData();
+            document.getElementById("name").value = "";
+            document.getElementById("img").value = ""
+        }
+
+        function deleteAll() {
+            movieDetails.length = 0;
+            LoadData();
+        }
+
+        function Clickdelete(id) {
+            const index = movieDetails.findIndex(x => x.id === id);
+            if (index != -1) {
+                movieDetails.splice(index, 1);
+                LoadData();
+            }
+        }
+
+        function sortAsc() {
+            movieDetails.sort((a, b) => a.name.localeCompare(b.name));
+            LoadData();
+        }
+        function sortDesc() {
+            movieDetails.sort((a, b) => a.name.localeCompare(b.name)).reverse();
+
+            LoadData();
+        }
+
+    </script>
+    <style>
+        img {
+            width: 250px;
+            height: 150px;
+
+        }
+    </style>
+</head>
+
+<body onload="LoadData()">
+
+    <div id="movieUpdate" class="modal fade">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div id="movieName">
+
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <input id="newName" placeholder="Enter the Movie name" type="text" class="form-control m-3">
+                    <input id="newPath"  placeholder="Enter the image path" type="text" class="form-control m-3">
+                </div>
+                <div class="modal-footer">
+                    <button onclick="ClickUpdate()" class="btn btn-primary" data-bs-dismiss="modal">Update</button>
+                    <button class="btn btn-outline-danger" data-bs-dismiss="modal"><span class="bi bi-x-octagon mx-2"></span>Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <nav>
+            <h1>CRUD Operations with Arrays</h1>
+            <p>This is a simple example of CRUD operations performed on an array.</p>
+        </nav>
+        <main class="d-flex row">
+            <aside class="border border-2 bg-light col-2 rounded ">
+                <h6 class="bi bi-tools">Operations</h6>
+                <button class="btn btn-success m-2 " onclick="sortAsc()">Sort-ASC</button>
+                <button class="btn btn-success m-2 " onclick="sortDesc()">Sort-desc </button>
+                <button class="btn btn-danger m-2 " onclick="deleteAll()">Delete all</button>
+                <hr>
+                <div class="card m-2 p-2 ">
+                    <label for="name   ">Name</label>
+                    <input id="name" required name="name" type="text" class="m-2 p-2">
+                    <label for="img">Img</label>
+                    <input name="img" required id="img" type="text" placeholder="/Public/images/image-[numbers]" class="m-2 p-2">
+                    <button onclick="AddClick()" class="btn btn-primary m-2 ">Add</button>
+
+                </div>
+            </aside>
+            <section id="ShowData" class="border border-2 bg-light col-10 rounded d-flex  row justify-content-between">
+            </section>
+        </main>
+
+
+    </div>
+</body>
+
+</html>

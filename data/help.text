@@ -1,0 +1,3 @@
+- it allows to add new content into page without reloading the page.
+- it enables partial post back, so that  only specific portion of page can be posted to server
+- Browser handles ajax requests by using "XMLHttpRequest" object.

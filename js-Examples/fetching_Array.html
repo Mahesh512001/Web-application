@@ -1,0 +1,92 @@
+<!-- <script>
+    var values = ['elements', "electronics", "fashion", "footwear"];
+    document.write(values.join("__"))   //if i want any custom delemiter so we specified inside the join as a parameter..
+
+    values.forEach((values, index)=> {
+        document.write(`<br>${index} index is tends to =>  ${values}`);
+    })
+     document.write(`<br> <br>`);
+    values.map((values, index)=> {
+   
+        document.write(`<br>${index} index is tends to =>  ${values}`);
+    })
+  document.write(`<br> <br>`);
+    for(var property in values){
+        document.write(`<br>${property}  ${values[property]}`);
+    }
+
+ document.write(`<h2> Filter the array</h2>`);
+    // filter the array ...
+var valueses = [535534,35,34,53.535,64564,,74453,74564,645463]
+    valueses.find((x)=> {
+        return (x >= 50000)? document.write(` ${x} `):"";
+    });
+
+     valueses.filter((x)=> {
+        return (x >= 50000)? document.write(` ${x} `):"";
+    })
+
+
+     document.write(`<h2> sorting in the array</h2>`);
+
+     valueses.sort((x)=> {
+        document.write(`<br>${x}`);
+     })
+
+ document.write(`<h2> adding the array</h2>`);
+
+var x = ['kids', 'women', 'men', 'boy'];
+x.push("vijay");
+x.unshift("All");
+x.splice(2,0,"Anju");
+x.map((x)=>{
+ document.write(`${x}<br>`);
+})
+
+
+ document.write(`<h2> removing the array</h2>`);
+
+
+x.pop("vijay");
+x.shift("All");
+x.splice(0,0,"Anju");
+x.map((x)=>{
+ document.write(`${x}<br>`);
+}) 
+
+
+
+
+    
+</script>
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+    <script>
+         var i = 0;
+        function ClickEventFire(){
+           
+            i++;
+  let pic = document.createElement("img");
+        pic.src = `../Public/images/image-${i}.jpg`;
+        document.querySelector(".container").appendChild(pic);
+        }
+      
+
+    </script>
+</head>
+<body>
+    <button onclick="ClickEventFire()" type="button">Click Here</button>
+<div class="container"></div>   
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+
+    <!-- <link rel="sytlesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css"> -->
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+        <script>
+            function addFolder() {
+                    folderName = prompt("Enter folder Name");
+                    if(folderName === null)
+                    {
+                        alert("folder creation is cancelled");
+                    }
+                    else if(folderName === "")
+                    {
+                       alert("please Enter a folder name");
+                    }
+                    else
+                    {
+                      document.querySelector("p").innerHTML += "<span class='bi bi-folder'></span> " + folderName +"<br>";
+                    }
+                    
+            }
+            function clearfolder() {
+                document.querySelector("p").innerText = "";
+            }
+        </script>
+    <title>Document</title>
+</head>
+<body>
+    <h1>Prompt</h1>
+     <button onClick="addFolder()" class="btn btn-primary"> <span class="bi bi-folder-plus"></span> Add Folder</button>
+     <button onclick ="clearfolder()" class="btn btn-danger"><span class="bi bi-dash"></span>clear</button>
+     <p></p>
+</body>
+</html>
